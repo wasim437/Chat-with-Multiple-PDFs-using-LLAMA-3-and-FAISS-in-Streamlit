@@ -10,6 +10,7 @@ from langchain_groq import ChatGroq
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 
+
 # Load environment variables
 load_dotenv()
 
@@ -40,7 +41,7 @@ def create_chain(vectorstore):
     llm = ChatGroq(
         model="llama3-70b-8192",
         temperature=0,
-        groq_api_key=os.getenv("GROQ_API_KEY") or "your_groq_api_key_here"
+        groq_api_key="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"
     )
     retriever = vectorstore.as_retriever()
     memory = ConversationBufferMemory(
